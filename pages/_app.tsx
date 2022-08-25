@@ -13,8 +13,10 @@ import '../styles/sidebar.css'
 import '../styles/transactions.css'
 import '../styles/transactions-detail.css'
 import '../styles/edit-profile.css'
+import '../styles/navbar-log-in.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import Script from 'next/script'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -27,12 +29,6 @@ function MyApp({ Component, pageProps }: AppProps) {
           integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
           crossOrigin="anonymous"
         />
-        {/* Bootsrap Js */}
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-          crossOrigin="anonymous"
-        ></script>
 
         {/* Google Font */}
         <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -47,6 +43,15 @@ function MyApp({ Component, pageProps }: AppProps) {
           rel="stylesheet"
         />
       </Head>
+
+      {/* Bootsrap Js */}
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossOrigin="anonymous"
+      ></script>
+      <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></Script>
+
       <Component {...pageProps} />
     </>
   )
