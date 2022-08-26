@@ -13,9 +13,10 @@ interface MenuItemProps {
     | 'ic-menu-settings'
     | 'ic-menu-transaction'
   active?: boolean
+  href: string
 }
 export default function MenuItem(props: Partial<MenuItemProps>) {
-  const { title, icon, active } = props
+  const { title, icon, active, href } = props
   const classItem = classNames({
     item: true,
     'mb-30': true,
@@ -29,7 +30,7 @@ export default function MenuItem(props: Partial<MenuItemProps>) {
       </div>
 
       <p className="item-title m-0">
-        <Link href="#">
+        <Link href={href}>
           <a className="text-lg text-decoration-none">{title}</a>
         </Link>
       </p>
